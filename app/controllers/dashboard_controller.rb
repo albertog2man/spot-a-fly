@@ -1,7 +1,7 @@
 class DashboardController < ApplicationController
   before_action :clean_params
   def index
-    if !!@params
+    if !@params.blank?
       search_term = @params[:search_term]
       result = Spotify.new.search(search_term)
       @trackset = ""
