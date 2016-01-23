@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+
+
+  root 'landing#landing'
+
+  get 'dashboard/index' => 'dashboard#index'
+  get 'dashboard/search' => 'dashboard#search'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
