@@ -1,11 +1,12 @@
 class DashboardController < ApplicationController
   before_action :clean_params
-
   def index
     if @params
       search_term = @params[:search_term]
-      @result = Spotify.new.search(search_term)
-      @result = @result.first.id
+      result = Spotify.new.search(search_term)
+      @trackset = ""
+      result.each{|r| @trackset += "#{r.id},"}
+      @trackset = @trackset.chop
     end
   end
 

@@ -4,5 +4,7 @@
   <%= text_field_tag(:search_term,params[:search_term]) %>
   <%= submit_tag("Search") %>
 <% end %>
-<iframe src="https://embed.spotify.com/?uri=spotify:track:<%= @result %>" width="600" height="600" frameborder="0" allowtransparency="true">
-</iframe>
+<div class="play_div">
+  <iframe class="player" src="https://embed.spotify.com/?uri=spotify:trackset:PREFEREDTITLE:<%=@trackset%>" width="640" height="720" frameborder="0" allowtransparency="true">
+  </iframe>
+</div>
