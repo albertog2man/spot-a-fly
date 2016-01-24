@@ -1,5 +1,8 @@
 <h1>Dashboard</h1>
-
+<div>
+  <%= link_to('Exit',root_path)%>
+  <p class='status'></p>
+</div>
 <%= form_tag(dashboard_index_path, method: "get") do %>
   <%= text_field_tag(:search_term,params[:search_term]) %>
   <%= submit_tag("Search") %>

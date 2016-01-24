@@ -4,14 +4,12 @@
 
 var ready;
 ready = function() {
-
-  $(document).click(function(){
-    iframe = $('iframe');
-    url = iframe.contents().find('.art').attr('src');
-    $('body').css('background-image', 'url(' + url + ')');
-    console
-  });
-
+  var sec = 0;
+  function pad ( val ) { return val > 9 ? val : "0" + val; }
+  setInterval( function(){
+      $(".status").html(pad(++sec%60));
+  }, 1000);
 }
+
 $(document).ready(ready);
 $(document).on('page:load', ready);

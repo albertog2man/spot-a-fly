@@ -7,6 +7,7 @@ class DashboardController < ApplicationController
       @trackset = ""
       result.each{|r| @trackset += "#{r.id},"}
       @trackset = @trackset.chop
+      @status = ''
     end
   end
 
