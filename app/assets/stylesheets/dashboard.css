@@ -1,3 +1,6 @@
+html {
+  color:grey;
+}
 .play_div {
   text-align: center;
 }
@@ -10,4 +13,56 @@
   margin-left: 24%;
   pointer-events: none;
 
+}
+p,.minutes, .seconds {
+  display: inline;
+  color:cyan;
+}
+body {
+  background: url(http://hdwallpaperia.com/wp-content/uploads/2013/11/Abstract-Dark.jpg) no-repeat center center fixed; */
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.streamer{
+  text-align: center;
+  margin: 0 auto;
+  height: 500px;
+}
+.song_list{
+  display: block;
+  margin: 0 auto;
+  height: 90%;
+  width: 70%;
+}
+.song_div{
+  display: inline-block;
+  height: 80px;
+  width: 80px;
+  float:left;
+  text-align: center;
+  margin:20px;
+}
+.input{
+  background-color: transparent;
+  color: white;
+  width: 400px;
+  height: 20px;
+  float: right;
+  border: 2px solid cyan;
+}
+.submit{
+  float: right;
+  background-color: cyan;
+  border: 2px solid cyan;
+  height: 26px;
+}
+.search{
+  margin-bottom: 70px;
+  margin-top: -40px;
+}
+.balance{
+  display: inline-block;
+  color: cyan;
 }

@@ -1,13 +1,17 @@
-<h1>Dashboard</h1>
-<div>
-  <%= link_to('Exit',root_path)%>
-  <p class='status'></p>
+<div class="search">
+  <%= submit_tag("Search",class:"submit") %>
+  <%= text_field_tag(:search_term,params[:search_term],class:"input") %>
 </div>
-<%= form_tag(dashboard_index_path, method: "get") do %>
-  <%= text_field_tag(:search_term,params[:search_term]) %>
-  <%= submit_tag("Search") %>
-<% end %>
-<div class="play_div">
-  <iframe class="player" src="https://embed.spotify.com/?uri=spotify:trackset:PREFEREDTITLE:<%=@trackset%>" width="640" height="720" frameborder="0" allowtransparency="true">
-  </iframe>
+<p>Balance:
+<div id="balance">
+</div>
+</p>
+<div class="streamer">
+  <div class="song_list">
+  </div>
+  <div class="play_div">
+    <audio class='player' controls>
+      <source class="source" src="https://p.scdn.co/mp3-preview/9ee203e7e8f7faa67ea7b1f48e58acdcdb326249" type="audio/ogg">
+    </audio>
+  </div>
 </div>
